@@ -1,4 +1,4 @@
-package io.github.rushiranpise.gameunlocker;
+package io.github.rifsxd.gameunlockerextended;
 
 import android.annotation.SuppressLint;
 import android.os.Build;
@@ -16,18 +16,29 @@ import de.robv.android.xposed.callbacks.XC_LoadPackage;
 
 @SuppressLint("DiscouragedPrivateApi")
 @SuppressWarnings("ConstantConditions")
-public class GAMEUNLOCKER implements IXposedHookLoadPackage {
+public class GAMEUNLOCKEREXTENDED implements IXposedHookLoadPackage {
 
-    private static final String TAG = GAMEUNLOCKER.class.getSimpleName();
+    private static final String TAG = GAMEUNLOCKEREXTENDED.class.getSimpleName();
+
+    // Packages to Spoof as DEBUG DEVICE
+    private static final String[] packagesToChangeDEBUGDEVICE = {
+        "com.ytheekshana.deviceinfo"
+    };
+    
     // Packages to Spoof as ROG Phone 6
     private static final String[] packagesToChangeROG6 = {
-        "com.activision.callofduty.shooter",
         "com.activision.callofudty.warzone",
         "com.ea.gp.fifamobile",
         "com.gameloft.android.ANMP.GloftA9HM",
         "com.madfingergames.legends",
         "com.pearlabyss.blackdesertm",
+        "com.activision.callofudty.warzone",
         "com.pearlabyss.blackdesertm.gl"
+    };
+
+    // Packages to Spoof as Samsung Galaxy S9+
+    private static final String[] packagesToChangeSMG965F = {
+        "com.activision.callofduty.shooter"
     };
 
     // Packages to Spoof as Xperia 5
@@ -109,10 +120,23 @@ public class GAMEUNLOCKER implements IXposedHookLoadPackage {
 
         String packageName = loadPackageParam.packageName;
 
+        // Debug
+        if (Arrays.asList(packagesToChangeDEBUGDEVICE).contains(packageName)) {
+            propsToChangeDEBUGDEVICE();
+            XposedBridge.log("Spoofed " + packageName + " as Debug Device");
+        }
+
+
         // Asus
         if (Arrays.asList(packagesToChangeROG6).contains(packageName)) {
             propsToChangeROG6();
             XposedBridge.log("Spoofed " + packageName + " as Asus ROG 6");
+        }
+
+        // Samsung
+        if (Arrays.asList(packagesToChangeSMG965F).contains(packageName)) {
+            propsToChangeSMG965F();
+            XposedBridge.log("Spoofed " + packageName + " as Samsung Galaxy S9+");
         }
 
         // Black Shark
@@ -162,6 +186,16 @@ public class GAMEUNLOCKER implements IXposedHookLoadPackage {
         }
     }
 
+    // Debug Device
+    // Props to Spoof as Asus Rog 6
+    private static void propsToChangeDEBUGDEVICE() {
+        setPropValue("BRAND", "DEBUG");
+        setPropValue("MANUFACTURER", "DEBUG ");
+        setPropValue("DEVICE", "DB070224");
+        setPropValue("MODEL", "DEBUG_DB070224");
+    }
+    
+
     // Asus
     // Props to Spoof as Asus Rog 6
     private static void propsToChangeROG6() {
@@ -169,6 +203,14 @@ public class GAMEUNLOCKER implements IXposedHookLoadPackage {
         setPropValue("MANUFACTURER", "asus");
         setPropValue("DEVICE", "AI2201");
         setPropValue("MODEL", "ASUS_AI2201");
+    }
+
+
+    // Samsung
+    // Props to Spoof as Samsung Galaxy S9+
+    private static void propsToChangeSMG965F() {
+        setPropValue("MANUFACTURER", "Samsung");
+        setPropValue("MODEL", "SM-G965F");
     }
 
     // Blackshark

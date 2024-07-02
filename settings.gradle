@@ -15,5 +15,5 @@ dependencyResolutionManagement {
         }
     }
 }
-rootProject.name = "GAMEUNLOCKER"
+rootProject.name = "GAMEUNLOCKEREXTENDED"
 include ':app'

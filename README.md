@@ -1,11 +1,11 @@
-# Game-Unlocker
-## Unlock higher FPS in games
-Spoof your device as different model for specific games to unlock higher FPS
+# Game-Unlocker Extended
+## Unlock hidden features and graphics options 
+Spoof your device as different model for specific games and apps to unlock hidden features and graphics options.
 
 ## Features
 
-- Device spoofing for enhanced gaming experiences.
-- Compatibility with a wide range of popular gaming applications.
+- Device spoofing for enhanced gaming experiences and special features.
+- Compatibility with a wide range of popular games and applications.
 - Easy installation and no configuration.
 
 ## Table of Contents
@@ -14,6 +14,7 @@ Spoof your device as different model for specific games to unlock higher FPS
 - [Usage](#usage)
 - [License](#license)
 - [Contributing](#contributing)
+- [Credits](#credits)
 
 ## Getting Started
 
@@ -23,29 +24,29 @@ To get started with Game Unlocker, follow these steps:
 
 2. Install the Xposed/Lsposed Framework on your device.
    
-3. Download the Game Unlocker module from the [releases section](https://github.com/rushiranpise/game-unlocker/releases) of this repository.
+3. Download the Game Unlocker module from the [releases section](https://github.com/rifsxd/game-unlocker-extended/releases) of this repository.
 
 4. Install the downloaded apk :
    - Open Xposed/Lsposed Manager.
    - Go to the "Modules" section.
-   - Search "Game Unlocker" and enable the module.
+   - Search "Game Unlocker Extended" and enable the module.
    - The supported games are auto added to the scope.
-   - Force Stop the added game manually to take effect.
+   - Force Stop the added game or apps manually to take effect.
 
 ## Usage
 
-Once you've installed and activated the Game Unlocker module, it will automatically spoof your device information for supported gaming applications. There's no additional configuration required. Simply force stop and open the games you want to play, and enjoy the benefits of device spoofing.
+Once you've installed and activated the Game Unlocker Extended module, it will automatically spoof your device information for supported games and applications. There's no additional configuration required. Simply force stop and open the games and apps you want to play or open, and enjoy the benefits of device spoofing.
 
-You can untick the game you don't want to spoof for the module scope. Force stop and relaunch is required.
+You can untick the game or app you don't want to spoof for the module scope. Force stop and relaunch is required.
 
 **Note:** Keep in mind that device spoofing may violate the terms of service for some games or apps.
 
-Report any suggestions/issues with games [here](https://github.com/rushiranpise/Game-Unlocker/issues)
+Report any suggestions/issues with games [here](https://github.com/rifsxd/Game-Unlocker-Extended/issues)
 
 ## Supported Games
 
 <details>
-  <summary>Click to expand the list of supported games</summary>
+  <summary>Click to expand the list of supported games and apps</summary>
 
 - https://play.google.com/store/apps/details?id=com.YoStar.AetherGazer&hl=en&gl=US
 - https://play.google.com/store/apps/details?id=com.activision.callofduty.shooter&hl=en&gl=US
@@ -109,3 +110,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 - [RisingTechOSS](https://github.com/RisingTechOSS)
 - [tehcneko](https://github.com/tehcneko)
 - [Evolution-X](https://github.com/Evolution-X)
+
+## Credits
+
+- [rushiranpise](https://github.com/rushiranpise/Game-Unlocker)

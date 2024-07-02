@@ -7,11 +7,11 @@ android {
     buildToolsVersion "33.0.1"
 
     defaultConfig {
-        applicationId "io.github.rushiranpise.gameunlocker"
+        applicationId "io.github.rifsxd.gameunlockerextended"
         minSdkVersion 28
         targetSdkVersion 33
-        versionCode 4
-        versionName "7.0.0"
+        versionCode 1
+        versionName "1.0.0"
     }
 
     buildTypes {
@@ -27,7 +27,7 @@ android {
     }
 
     dependenciesInfo.includeInApk false
-    namespace 'io.github.rushiranpise.gameunlocker'
+    namespace 'io.github.rifsxd.gameunlockerextended'
 }
 
 dependencies {
